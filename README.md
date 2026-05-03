@@ -6,7 +6,7 @@ A modern admin dashboard built to demonstrate clean frontend architecture, reusa
 
 ## Live Preview
 
-*(Add Vercel deployment link here if available)*
+*[(VISIT NOW)](https://nexus-admindashboard.netlify.app/)*
 
 ---
 
