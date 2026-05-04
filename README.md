@@ -129,4 +129,14 @@ It is designed to reflect how a production dashboard might be structured without
 
 ---
 
+## Roadmap
+
+* [ ] **Search Functionality:** Implement global search across users and API keys.
+* [ ] **Settings Integration:** Connect profile settings with local storage for persistence.
+* [ ] **Enhanced Analytics:** Add time-range filters (7d, 30d, 90d) for chart data.
+* [ ] **Dark/Light Mode:** Implement a theme switcher for better accessibility.
+
+---
+
 *Built with a focus on clarity, scalability, and practical frontend engineering.*
+
