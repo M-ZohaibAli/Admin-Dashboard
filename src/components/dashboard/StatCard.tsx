@@ -35,13 +35,13 @@ export function StatCard({ label, value, change, changeLabel, icon }: StatCardPr
   const isPositive = change >= 0;
 
   return (
-    <div className="group relative rounded-2xl border border-white/5 bg-white/[0.03] p-6 shadow-xl overflow-hidden hover:border-violet-500/20 transition-all duration-300 hover:bg-white/[0.05]">
+    <div className="group relative rounded-2xl border border-white/5 bg-white/[0.03] p-5 md:p-6 shadow-xl overflow-hidden hover:border-violet-500/20 transition-all duration-300 hover:bg-white/[0.05]">
       {/* Glow blob */}
       <div className="absolute -top-8 -right-8 h-24 w-24 rounded-full bg-violet-600/10 blur-2xl group-hover:bg-violet-600/20 transition-colors duration-500" />
 
       <div className="flex items-start justify-between relative z-10">
         <div>
-          <p className="text-xs font-medium text-zinc-500 uppercase tracking-widest mb-3">{label}</p>
+          <p className="text-xs font-medium text-zinc-500 uppercase tracking-widest mb-2">{label}</p>
           <p className="text-3xl font-bold text-white tracking-tight">{value}</p>
         </div>
         <div className="h-10 w-10 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400 shrink-0">
