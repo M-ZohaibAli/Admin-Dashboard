@@ -1,9 +1,11 @@
 "use client";
 
 import { useSidebar } from "./SidebarContext";
+import { useToast } from "@/components/ui/Toast";
 
 export function Header() {
   const { toggleSidebar } = useSidebar();
+  const { toast } = useToast();
 
   return (
     <header className="sticky top-0 z-10 h-16 bg-[#0d0d10]/80 backdrop-blur-md border-b border-white/5 flex items-center px-4 md:px-6 gap-4">
@@ -38,6 +40,7 @@ export function Header() {
       {/* Notification bell */}
       <button
         aria-label="Notifications"
+        onClick={() => toast("No new notifications", "info")}
         className="relative flex items-center justify-center h-9 w-9 rounded-lg bg-white/5 border border-white/8 text-zinc-400 hover:text-white hover:border-violet-500/40 transition-all shrink-0"
       >
         <svg className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -48,7 +51,10 @@ export function Header() {
       </button>
 
       {/* Avatar */}
-      <div className="h-9 w-9 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center text-white text-xs font-bold cursor-pointer ring-2 ring-transparent hover:ring-violet-500/40 transition-all shrink-0">
+      <div 
+        onClick={() => toast("Profile settings opening...", "info")}
+        className="h-9 w-9 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center text-white text-xs font-bold cursor-pointer ring-2 ring-transparent hover:ring-violet-500/40 transition-all shrink-0"
+      >
         AH
       </div>
     </header>

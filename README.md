@@ -6,7 +6,7 @@ A modern admin dashboard built to demonstrate clean frontend architecture, reusa
 
 ## Live Preview
 
-*[(VISIT NOW)](https://nexus-admindashboard.netlify.app/)*
+[*(LIVE DEMO LINK - CLICK HERE)*](https://nexus-admindashboard.netlify.app/)
 
 ---
 

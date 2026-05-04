@@ -54,10 +54,12 @@ const navItems = [
 ];
 
 import { useSidebar } from "./SidebarContext";
+import { useToast } from "@/components/ui/Toast";
 
 export function Sidebar() {
   const pathname = usePathname();
   const { isOpen, setIsOpen } = useSidebar();
+  const { toast } = useToast();
 
   return (
     <>
@@ -129,7 +131,10 @@ export function Sidebar() {
 
         {/* Footer */}
         <div className="mt-auto pt-6 border-t border-white/5">
-          <div className="flex items-center gap-3 px-2 py-2 rounded-xl hover:bg-white/5 transition-colors cursor-pointer">
+          <div 
+            onClick={() => toast("Profile settings opening...", "info")}
+            className="flex items-center gap-3 px-2 py-2 rounded-xl hover:bg-white/5 transition-colors cursor-pointer"
+          >
             <div className="h-8 w-8 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center text-white text-xs font-bold shrink-0">
               AH
             </div>
