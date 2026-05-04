@@ -2,9 +2,19 @@
 // Mock Data — single source of truth for the app
 // ─────────────────────────────────────────────
 
+/**
+ * User account status types
+ */
 export type UserStatus = "active" | "inactive" | "pending";
+
+/**
+ * Available user roles for access control
+ */
 export type UserRole = "Admin" | "Developer" | "Viewer" | "Editor";
 
+/**
+ * Represents a user in the system
+ */
 export interface User {
   id: string;
   name: string;
@@ -16,6 +26,9 @@ export interface User {
   avatarUrl: string;
 }
 
+/**
+ * Represents an API Key configuration
+ */
 export interface ApiKey {
   id: string;
   name: string;
@@ -26,6 +39,9 @@ export interface ApiKey {
   requests: number;
 }
 
+/**
+ * Data structure for dashboard statistic cards
+ */
 export interface StatItem {
   id: string;
   label: string;
@@ -169,6 +185,9 @@ export const MOCK_API_KEYS: ApiKey[] = [
 ];
 
 // ── Dashboard Stats ────────────────────────────
+/**
+ * Mocked statistics for the dashboard overview
+ */
 export const MOCK_STATS: StatItem[] = [
   {
     id: "stat_users",
